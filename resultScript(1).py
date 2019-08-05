@@ -32,18 +32,14 @@ roll = input("start roll number")
 rollend = input("end roll number")
 rollint = int(roll[7:])
 rollendint = int(rollend[7:])
-#temproll = roll[:7] + str(rollint)
-#print(temproll)
-#getRes(temproll)
+
+def strRoll(rollInt):
+    if rollInt <= 9:
+        return "00"+str(rollInt)
+    if rollInt < 100:
+        return "0"+str(rollInt)
 while rollint <= rollendint:
-    temproll = roll[:7] + str(rollint)
+    temproll = roll[:7] + strRoll(rollint)
     #print(temproll)
     getRes(temproll)
     rollint+=1
-
-
-# In[ ]:
-
-
-
-
